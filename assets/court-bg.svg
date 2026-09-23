@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="plank" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0c090"/>
+      <stop offset="45%" stop-color="#c9a36a"/>
+      <stop offset="100%" stop-color="#b5894f"/>
+    </linearGradient>
+    <pattern id="wood" width="72" height="900" patternUnits="userSpaceOnUse">
+      <rect width="72" height="900" fill="url(#plank)"/>
+      <rect x="0" y="0" width="72" height="900" fill="#8b6914" opacity="0.06"/>
+      <!-- plank edge -->
+      <rect x="70" width="2" height="900" fill="#6b4e2e" opacity="0.35"/>
+      <!-- wood grain noise lines -->
+      <path d="M8 0 C12 200,4 400,10 600 S6 800,9 900" stroke="#8a6230" stroke-width="1" fill="none" opacity="0.18"/>
+      <path d="M28 0 C24 180,32 360,26 540 S30 760,27 900" stroke="#a07438" stroke-width="0.8" fill="none" opacity="0.14"/>
+      <path d="M48 0 C52 220,44 440,50 660 S46 820,49 900" stroke="#7a5528" stroke-width="1" fill="none" opacity="0.16"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#wood)"/>
+  <!-- subtle varnish sheen -->
+  <rect width="1600" height="900" fill="#fff" opacity="0.04"/>
+
+  <!-- Court boundary -->
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4">
+    <rect x="80" y="60" width="1440" height="780" rx="8"/>
+    <!-- center line -->
+    <line x1="800" y1="60" x2="800" y2="840"/>
+    <!-- center circle -->
+    <circle cx="800" cy="450" r="90"/>
+    <!-- left key -->
+    <rect x="80" y="270" width="220" height="360"/>
+    <circle cx="300" cy="450" r="90"/>
+    <!-- left restricted / FT semicircle outside -->
+    <path d="M300 360 A90 90 0 0 1 300 540" stroke-dasharray="0"/>
+    <!-- left hoop mark -->
+    <circle cx="130" cy="450" r="12" stroke-width="3"/>
+    <line x1="80" y1="450" x2="118" y2="450" stroke-width="3"/>
+    <!-- right key -->
+    <rect x="1300" y="270" width="220" height="360"/>
+    <circle cx="1300" cy="450" r="90"/>
+    <circle cx="1470" cy="450" r="12" stroke-width="3"/>
+    <line x1="1482" y1="450" x2="1520" y2="450" stroke-width="3"/>
+    <!-- three-point arcs (simplified) -->
+    <path d="M80 160 Q 420 450 80 740" stroke-width="3.5"/>
+    <path d="M1520 160 Q 1180 450 1520 740" stroke-width="3.5"/>
+  </g>
+  <!-- painted key tint -->
+  <rect x="80" y="270" width="220" height="360" fill="#c45c26" opacity="0.12"/>
+  <rect x="1300" y="270" width="220" height="360" fill="#c45c26" opacity="0.12"/>
+</svg>

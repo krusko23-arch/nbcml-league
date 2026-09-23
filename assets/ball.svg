@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <radialGradient id="ballGrad" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#ff9a3c"/>
+      <stop offset="55%" stop-color="#e87722"/>
+      <stop offset="100%" stop-color="#c45a10"/>
+    </radialGradient>
+  </defs>
+  <circle cx="50" cy="50" r="47" fill="url(#ballGrad)" stroke="#1a1a1a" stroke-width="2"/>
+  <!-- horizontal seam -->
+  <path d="M5 50 Q50 58 95 50" fill="none" stroke="#1a1a1a" stroke-width="2.2"/>
+  <!-- vertical seam -->
+  <path d="M50 3 Q58 50 50 97" fill="none" stroke="#1a1a1a" stroke-width="2.2"/>
+  <!-- left curve -->
+  <path d="M18 18 Q28 50 18 82" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+  <!-- right curve -->
+  <path d="M82 18 Q72 50 82 82" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+  <!-- NBCML text -->
+  <text x="50" y="54" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="13" font-weight="900" fill="#111" letter-spacing="0.5">NBCML</text>
+</svg>
