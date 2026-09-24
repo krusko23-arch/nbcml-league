@@ -27,6 +27,24 @@
   var tbody = table && table.querySelector("tbody");
   if (!tbody) return;
 
+  var teamColors = {};
+  (window.NBCML_ROSTERS || []).forEach(function (team) {
+    if (team && team.id != null && team.color) {
+      teamColors[String(team.id)] = team.color;
+    }
+  });
+  // Fallback if rosters.js did not load — same palette as data/rosters.js
+  if (!Object.keys(teamColors).length) {
+    teamColors = {
+      "1": "#ffffff",
+      "2": "#e8d9c0",
+      "3": "#f5e6a3",
+      "4": "#f5c9b8",
+      "5": "#c8e6c0",
+      "6": "#c5daf5"
+    };
+  }
+
   var players = (data.players || []).slice();
   var sortKey = "rank";
   var sortDir = "asc";
@@ -93,10 +111,18 @@
       .map(function (p) {
         var rank = p.rank != null ? p.rank : "—";
         var slug = playerSlug(p.player);
+        var bg = teamColors[String(p.team)] || "";
+        var styleAttr = bg
+          ? ' style="--team-bg:' + bg + ';background:' + bg + '"'
+          : "";
         return (
-          '<tr id="p-' +
+          '<tr class="team-tint" id="p-' +
           slug +
-          '">' +
+          '" data-team="' +
+          p.team +
+          '"' +
+          styleAttr +
+          ">" +
           '<td class="num">' +
           rank +
           "</td>" +
