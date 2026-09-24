@@ -451,63 +451,55 @@ a:focus-visible {
 
 /* ---------- Home ---------- */
 
+.home-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 18px;
+  margin: 0 0 10px;
+}
+
+.home-top h1 {
+  margin: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.last-year-link {
+  flex: 0 0 auto;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(11, 87, 208, 0.35);
+  padding-bottom: 1px;
+  white-space: nowrap;
+}
+
+.last-year-link:hover,
+.last-year-link:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  outline: none;
+}
+
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 1fr;
+  grid-template-columns: minmax(260px, 480px);
+  justify-content: center;
   gap: 20px;
   margin-bottom: 8px;
   align-items: stretch;
 }
 
-@media (max-width: 800px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.countdown-card {
-  background: linear-gradient(145deg, #1a1f2e 0%, #0d1018 100%);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+.hero-grid .next-games {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #e2e6ee;
   border-radius: var(--radius);
-  padding: 28px 24px;
-  text-align: center;
-  box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 200px;
-}
-
-.countdown-card .eyebrow {
-  color: var(--nav-active);
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  margin-bottom: 10px;
-}
-
-.countdown-card h2 {
-  margin: 0 0 10px;
-  border: none;
-  color: #fff;
-  font-size: clamp(1.35rem, 2.8vw, 1.65rem);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  display: block;
-  padding: 0;
-}
-
-.countdown-card p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.72);
-  line-height: 1.5;
-  font-size: 0.98rem;
-}
-
-.countdown-card p + p {
-  margin-top: 10px;
+  padding: 18px 18px 16px;
+  box-shadow: var(--shadow-sm);
 }
 
 .times-table th {
@@ -1066,17 +1058,18 @@ a:focus-visible {
   }
 
   /* Home hero / highlights / meta */
-  .countdown-card {
-    padding: 22px 16px;
-    min-height: 0;
+  .home-top {
+    gap: 6px 12px;
+    margin-bottom: 8px;
   }
 
-  .countdown-card h2 {
-    font-size: 1.28rem;
+  .last-year-link {
+    font-size: 0.88rem;
+    white-space: normal;
   }
 
-  .countdown-card p {
-    font-size: 0.92rem;
+  .hero-grid .next-games {
+    padding: 14px 12px 12px;
   }
 
   .highlights {
@@ -1287,18 +1280,6 @@ a:focus-visible {
   .nav-label {
     font-size: 0.62rem;
     line-height: 1.2;
-  }
-
-  .countdown-card {
-    padding: 16px 12px;
-  }
-
-  .countdown-card h2 {
-    font-size: 1.15rem;
-  }
-
-  .countdown-card p {
-    font-size: 0.88rem;
   }
 
   .next-game-date {
