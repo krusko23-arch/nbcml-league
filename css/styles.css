@@ -93,8 +93,10 @@ a:focus-visible {
 
 .page-wrap {
   max-width: 1140px;
+  width: 100%;
   margin: 0 auto;
   padding: 12px 14px 56px;
+  overflow-x: clip;
 }
 
 /* ---------- Sticky frosted header ---------- */
@@ -250,6 +252,8 @@ a:focus-visible {
   box-shadow: var(--shadow);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  min-width: 0;
+  max-width: 100%;
 }
 
 .panel h1 {
@@ -316,12 +320,16 @@ a:focus-visible {
 /* ---------- Tables ---------- */
 
 .table-wrap {
+  display: block;
+  width: 100%;
+  max-width: 100%;
   overflow-x: auto;
   margin-top: 12px;
   border-radius: var(--radius-sm);
   border: 1px solid #e2e6ee;
   box-shadow: var(--shadow-sm);
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
 }
 
 .data-table {
@@ -982,36 +990,387 @@ a:focus-visible {
 
 /* ---------- Mobile refinements ---------- */
 
+/* Home tip-off table is narrow — never force page-wide horizontal scroll */
+.times-table,
+.next-games .data-table {
+  min-width: 0;
+}
+
 @media (max-width: 640px) {
+  /* Fixed court bg is janky/heavy on phones */
+  body {
+    background-attachment: scroll;
+  }
+
   .page-wrap {
     padding: 10px 10px 40px;
   }
 
+  .site-header {
+    margin-bottom: 16px;
+  }
+
+  .league-banner {
+    padding: 12px 12px;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    line-height: 1.35;
+  }
+
+  .venue-bar,
+  .season-bar {
+    padding: 8px 10px;
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
   .panel {
-    padding: 22px 16px 26px;
+    padding: 20px 14px 24px;
+  }
+
+  .panel h1 {
+    font-size: 1.35rem;
+  }
+
+  .lede {
+    font-size: 0.95rem;
+  }
+
+  /* Ball nav: swipeable chips with ≥44px touch area */
+  .nav-scroll {
+    scroll-padding-inline: 6px;
+    overscroll-behavior-x: contain;
+  }
+
+  .site-nav {
+    min-width: 0;
   }
 
   .site-nav li {
-    flex: 0 0 128px;
+    flex: 0 0 112px;
   }
 
   .nav-cell {
-    min-height: 104px;
-    padding: 12px 8px 14px;
+    min-height: 100px;
+    padding: 10px 6px 12px;
+    gap: 5px;
   }
 
   .nav-ball {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-label {
+    font-size: 0.68rem;
+  }
+
+  /* Home hero / highlights / meta */
+  .countdown-card {
+    padding: 22px 16px;
+    min-height: 0;
+  }
+
+  .countdown-card h2 {
+    font-size: 1.28rem;
+  }
+
+  .countdown-card p {
+    font-size: 0.92rem;
+  }
+
+  .highlights {
+    margin-top: 22px;
+  }
+
+  .highlights-header {
+    margin-bottom: 12px;
+    gap: 6px 12px;
+  }
+
+  .highlights-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .highlights-sub {
+    font-size: 0.88rem;
+  }
+
+  .hl-games {
+    gap: 12px;
+  }
+
+  .hl-game-link {
+    padding: 12px 12px 8px;
+  }
+
+  .hl-scoreline {
+    font-size: 1.1rem;
+    gap: 6px;
+  }
+
+  .hl-team {
+    font-size: 0.88rem;
+  }
+
+  .hl-scorers {
+    padding: 10px 10px 12px;
+  }
+
+  .hl-scorers li {
+    font-size: 0.84rem;
+  }
+
+  .meta-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .meta-card {
+    padding: 14px 14px 12px;
+  }
+
+  .meta-card:hover {
+    transform: none; /* avoid sticky hover on touch */
+  }
+
+  /* Wide tables: keep wrap scroll, tighten cells, larger sort targets */
+  .table-wrap {
+    margin-top: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Keep wide tables inside the card; scroll within .table-wrap */
+  .panel {
+    overflow-x: clip;
+  }
+
+  #standings-table th,
+  #standings-table td {
+    white-space: nowrap;
   }
 
   .data-table {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
+    min-width: 480px;
+  }
+
+  .times-table,
+  .next-games .data-table {
+    min-width: 0;
   }
 
   .data-table th,
   .data-table td {
-    padding: 9px 10px;
+    padding: 10px 8px;
+  }
+
+  .data-table th.sortable .sort-btn {
+    padding: 12px 8px;
+    min-height: 44px;
+  }
+
+  #schedule-table,
+  #playoffs-table {
+    min-width: 640px;
+  }
+
+  #leaders-table {
+    min-width: 520px;
+  }
+
+  #leaders-table th.col-team,
+  #leaders-table td.col-team {
+    padding-left: 10px;
+    padding-right: 12px;
+  }
+
+  #scorekeeping-table {
+    min-width: 520px;
+  }
+
+  #standings-table {
+    min-width: 400px;
+  }
+
+  .btn {
+    padding: 12px 16px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chip {
+    padding: 8px 12px;
+    font-size: 0.84rem;
+  }
+
+  .final-score {
+    padding: 12px 14px;
+  }
+
+  .final-score-line {
+    font-size: 1.05rem;
+  }
+
+  .box-link {
+    padding: 4px 0;
+  }
+
+  /* Player game log */
+  .player-summary {
+    gap: 8px;
+  }
+
+  .player-summary-stat {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 0;
+    padding: 10px 10px;
+  }
+
+  .player-log-table {
+    min-width: 0; /* 4 columns fit phones; avoid pointless scroll */
+  }
+
+  .player-log-table th,
+  .player-log-table td {
+    padding: 10px 8px;
+  }
+
+  .site-footer {
+    margin-top: 24px;
+    padding: 14px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .page-wrap {
+    padding: 8px 8px 36px;
+  }
+
+  .panel {
+    padding: 16px 12px 20px;
+  }
+
+  .panel h1 {
+    font-size: 1.22rem;
+  }
+
+  .league-banner {
+    font-size: 0.7rem;
+    padding: 10px 8px;
+  }
+
+  .venue-bar,
+  .season-bar {
+    font-size: 0.76rem;
+    padding: 7px 8px;
+  }
+
+  .site-nav li {
+    flex: 0 0 100px;
+  }
+
+  .nav-cell {
+    min-height: 96px;
+    padding: 8px 4px 10px;
+  }
+
+  .nav-ball {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-label {
+    font-size: 0.62rem;
+    line-height: 1.2;
+  }
+
+  .countdown-card {
+    padding: 16px 12px;
+  }
+
+  .countdown-card h2 {
+    font-size: 1.15rem;
+  }
+
+  .countdown-card p {
+    font-size: 0.88rem;
+  }
+
+  .next-game-date {
+    font-size: 0.85rem;
+    padding: 4px 10px;
+  }
+
+  .hl-scoreline {
+    font-size: 1rem;
+    flex-wrap: wrap;
+    row-gap: 4px;
+  }
+
+  .hl-team {
+    font-size: 0.82rem;
+  }
+
+  .hl-scorers h3 {
+    font-size: 0.72rem;
+  }
+
+  .hl-scorers li {
+    font-size: 0.78rem;
+    gap: 4px;
+  }
+
+  .meta-card {
+    padding: 12px;
+  }
+
+  .meta-card h3 {
+    font-size: 0.88rem;
+  }
+
+  .data-table {
+    font-size: 0.78rem;
+    min-width: 440px;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 8px 6px;
+  }
+
+  .data-table th.sortable .sort-btn {
+    padding: 10px 6px;
+  }
+
+  #schedule-table,
+  #playoffs-table {
+    min-width: 580px;
+  }
+
+  #leaders-table,
+  #scorekeeping-table {
+    min-width: 480px;
+  }
+
+  .player-summary-stat .label {
+    font-size: 0.68rem;
+  }
+
+  .player-summary-stat .value {
+    font-size: 1.05rem;
+  }
+
+  .player-log-table {
+    min-width: 0;
+  }
+
+  .result-pill {
+    padding: 3px 7px;
   }
 }
 
@@ -1294,6 +1653,9 @@ a:focus-visible {
 }
 .player-log-heading {
   margin-top: 8px;
+}
+.player-log-table {
+  min-width: 0;
 }
 .player-log-table th {
   letter-spacing: 0.04em;
