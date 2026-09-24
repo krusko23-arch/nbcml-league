@@ -454,34 +454,17 @@ a:focus-visible {
 .home-top {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 8px 18px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 12px;
   margin: 0 0 10px;
+  text-align: center;
 }
 
 .home-top h1 {
   margin: 0;
-  flex: 1 1 auto;
-  min-width: 0;
-}
-
-.last-year-link {
-  flex: 0 0 auto;
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: var(--link);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(11, 87, 208, 0.35);
-  padding-bottom: 1px;
-  white-space: nowrap;
-}
-
-.last-year-link:hover,
-.last-year-link:focus-visible {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-  outline: none;
+  width: 100%;
+  text-align: center;
 }
 
 .hero-grid {
@@ -1066,11 +1049,8 @@ a:focus-visible {
   .home-top {
     gap: 6px 12px;
     margin-bottom: 8px;
-  }
-
-  .last-year-link {
-    font-size: 0.88rem;
-    white-space: normal;
+    justify-content: center;
+    text-align: center;
   }
 
   .hero-grid .next-games {
