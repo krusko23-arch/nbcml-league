@@ -14,7 +14,7 @@ It does **not** claim to host `newmarketbasketballclub.com`.
 | Player Stats | `individual-scoring.html` | FINAL leaders from `indiv-stats.htm` → `data/leaders.js` |
 | Schedule | `schedule.html` | Full grid + scores/box links from `data/schedule.js` + `data/games.js` |
 | Scorekeeping Schedule | `scorekeeping.html` | Parsed from `scorekeeping.htm` → `data/scorekeeping.js` |
-| Scoresheets PDF (live) | External link on home | https://www.newmarketbasketballclub.com/Scoresheets%202025-26.pdf |
+| Scoresheets PDF (live) | Home Scoresheets card | `assets/Printable-Scoresheets-NBCML-2026.pdf` (from club Scoresheets 2026.pdf) |
 
 ## Captains (2025-26)
 
