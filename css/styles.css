@@ -1057,6 +1057,19 @@ a:focus-visible {
     padding: 14px 12px 12px;
   }
 
+  .hg-home,
+  .hg-guest {
+    padding: 5px 8px;
+    min-width: 2.6rem;
+    font-size: 0.85rem;
+  }
+
+  .hg-vs {
+    min-width: 1.8rem;
+    padding: 5px 6px;
+    font-size: 0.7rem;
+  }
+
   .highlights {
     margin-top: 22px;
   }
@@ -1467,6 +1480,71 @@ a:focus-visible {
   color: #f5e6a3;
 }
 
+
+
+/* Home (white) / Guest (dark blue) on Next game matchups */
+.hg-matchup {
+  display: inline-flex;
+  align-items: stretch;
+  vertical-align: middle;
+  border: 2px solid #4a5568;
+  border-radius: 4px;
+  overflow: hidden;
+  font-weight: 800;
+  line-height: 1.2;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.hg-home,
+.hg-guest,
+.hg-vs {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  text-decoration: none;
+  min-width: 3.2rem;
+}
+
+.hg-home {
+  background: #fff;
+  color: #142846;
+  border-right: 1px solid #6b7280;
+}
+
+.hg-home:hover,
+.hg-home:focus-visible {
+  background: #f3f6fb;
+  outline: none;
+}
+
+.hg-vs {
+  background: #6b7280;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: lowercase;
+  min-width: 2.2rem;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.hg-guest {
+  background: #142846;
+  color: #fff;
+  border-left: 1px solid #6b7280;
+}
+
+.hg-guest:hover,
+.hg-guest:focus-visible {
+  background: #1e3a5f;
+  color: #f5e6a3;
+  outline: none;
+}
+
+.next-games .times-table td:last-child {
+  text-align: center;
+}
 
 .next-games-heading {
   display: flex;

@@ -52,10 +52,12 @@
     return String(time).replace(/\s*pm$/i, "");
   }
 
-  function teamLink(num) {
+  function teamSideLink(num, sideClass) {
     if (num == null || num === "") return "—";
     return (
-      '<a class="team-roster-link" href="rosters.html?team=' +
+      '<a class="' +
+      sideClass +
+      '" href="rosters.html?team=' +
       num +
       "#team-" +
       num +
@@ -70,7 +72,17 @@
       if (slot && slot.label) return slot.label;
       return "—";
     }
-    return teamLink(slot.home) + " vs " + teamLink(slot.away);
+    return (
+      '<span class="hg-matchup" aria-label="Home Team ' +
+      slot.home +
+      " vs Guest Team " +
+      slot.away +
+      '">' +
+      teamSideLink(slot.home, "hg-home") +
+      '<span class="hg-vs">vs</span>' +
+      teamSideLink(slot.away, "hg-guest") +
+      "</span>"
+    );
   }
 
   function isPlayableWeek(w) {
