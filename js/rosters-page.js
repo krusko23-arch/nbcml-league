@@ -1,11 +1,18 @@
 (function () {
-  function playerSlug(name) {
-    return String(name || "")
-      .toLowerCase()
-      .normalize("NFKD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-+|-+$/g, "");
+  var playerSlug = window.NBCML_playerSlug;
+  var playerHref = window.NBCML_playerHref;
+  if (!playerSlug || !playerHref) {
+    playerSlug = function (name) {
+      return String(name || "")
+        .toLowerCase()
+        .normalize("NFKD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+    };
+    playerHref = function (name) {
+      return "player.html?id=" + encodeURIComponent(playerSlug(name));
+    };
   }
 
   function requestedTeamId() {
@@ -30,7 +37,7 @@
         .map(function (p) {
           var mark = p.captain ? ' <span class="captain-mark">(C)</span>' : "";
           var cls = p.captain ? ' class="captain"' : "";
-          var href = "individual-scoring.html#p-" + playerSlug(p.name);
+          var href = playerHref(p.name);
           return (
             "<li" +
             cls +

@@ -50,11 +50,30 @@
       "</ul>";
   }
 
+  function playerHref(name) {
+    if (window.NBCML_playerHref) return window.NBCML_playerHref(name);
+    var slug = String(name || "")
+      .toLowerCase()
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+    return "player.html?id=" + encodeURIComponent(slug);
+  }
+
   function fmt(list) {
     if (!list || !list.length) return "—";
     return list
       .map(function (x) {
-        return x.name + " <span style='color:#888'>(T" + x.team + ")</span>";
+        return (
+          '<a class="player-name-link" href="' +
+          playerHref(x.name) +
+          '">' +
+          x.name +
+          "</a> <span style='color:#888'>(T" +
+          x.team +
+          ")</span>"
+        );
       })
       .join("<br>");
   }

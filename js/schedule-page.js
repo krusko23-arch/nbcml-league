@@ -10,6 +10,17 @@
       .replace(/"/g, "&quot;");
   }
 
+  function playerHref(name) {
+    if (window.NBCML_playerHref) return window.NBCML_playerHref(name);
+    var slug = String(name || "")
+      .toLowerCase()
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+    return "player.html?id=" + encodeURIComponent(slug);
+  }
+
   function teamLink(num, label) {
     if (num == null || num === "") return "—";
     var text = label != null ? label : "T" + num;
@@ -75,9 +86,11 @@
         return (
           '<span class="chip">' +
           teamLink(id, "T" + id) +
-          " " +
+          ' <a class="player-name-link" href="' +
+          playerHref(data.captains[id]) +
+          '">' +
           esc(data.captains[id]) +
-          "</span>"
+          "</a></span>"
         );
       })
       .join("");

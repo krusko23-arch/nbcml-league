@@ -1,5 +1,6 @@
 (function () {
   function playerSlug(name) {
+    if (window.NBCML_playerSlug) return window.NBCML_playerSlug(name);
     return String(name || "")
       .toLowerCase()
       .normalize("NFKD")
@@ -126,8 +127,8 @@
           '<td class="num">' +
           rank +
           "</td>" +
-          '<td><a class="player-name-link" href="player.html?id=' +
-          slug +
+          '<td><a class="player-name-link" href="' +
+          (window.NBCML_playerHref ? window.NBCML_playerHref(p.player) : ("player.html?id=" + slug)) +
           '">' +
           p.player +
           "</a></td>" +

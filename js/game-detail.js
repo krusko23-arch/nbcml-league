@@ -34,6 +34,17 @@
       .replace(/"/g, "&quot;");
   }
 
+  function playerHref(name) {
+    if (window.NBCML_playerHref) return window.NBCML_playerHref(name);
+    var slug = String(name || "")
+      .toLowerCase()
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+    return "player.html?id=" + encodeURIComponent(slug);
+  }
+
   var data = window.NBCML_GAMES;
   var id = params().id;
   if (!data || !data.games) {
@@ -99,7 +110,11 @@
           num +
           "</td>" +
           "<td>" +
+          '<a class="player-name-link" href="' +
+          playerHref(p.name) +
+          '">' +
           esc(p.name) +
+          "</a>" +
           "</td>" +
           '<td class="num">' +
           esc(p.points) +
@@ -118,9 +133,11 @@
       '">' +
       "<h2>Team " +
       teamNum +
-      " <span class=\"captain-tag\">" +
+      ' <span class="captain-tag"><a class="player-name-link" href="' +
+      playerHref(captain) +
+      '">' +
       esc(captain) +
-      '</span> <span class="team-total">' +
+      '</a></span> <span class="team-total">' +
       score +
       "</span></h2>" +
       '<div class="table-wrap"><table class="data-table box-score-table" aria-label="Team ' +

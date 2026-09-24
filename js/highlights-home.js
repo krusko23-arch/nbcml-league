@@ -36,6 +36,17 @@
       .slice(0, n);
   }
 
+  function playerHref(name) {
+    if (window.NBCML_playerHref) return window.NBCML_playerHref(name);
+    var slug = String(name || "")
+      .toLowerCase()
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+    return "player.html?id=" + encodeURIComponent(slug);
+  }
+
   function scorersList(players) {
     if (!players.length) {
       return '<li class="hl-empty-scorer">No scorers listed</li>';
@@ -43,9 +54,11 @@
     return players
       .map(function (p) {
         return (
-          "<li><span class=\"hl-name\">" +
+          '<li><a class="hl-name player-name-link" href="' +
+          playerHref(p.name) +
+          '">' +
           esc(p.name) +
-          '</span><span class="hl-pts">' +
+          '</a><span class="hl-pts">' +
           esc(p.points) +
           "</span></li>"
         );
