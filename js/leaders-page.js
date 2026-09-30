@@ -46,9 +46,68 @@
     };
   }
 
-  var players = (data.players || []).slice();
-  var sortKey = "rank";
-  var sortDir = "asc";
+  /**
+   * Derive GP / TP / AVG from game box scores when games.js is loaded
+   * (subs excluded; roster players with no games = 0 GP). Falls back to
+   * the static leaders.js numbers otherwise.
+   */
+  function deriveFromGames() {
+    var games = window.NBCML_GAMES && window.NBCML_GAMES.games;
+    if (!games || !games.length) return null;
+    var byName = {};
+    var list = [];
+    function ensure(name, team) {
+      if (!byName[name]) {
+        byName[name] = { player: name, team: team, gp: 0, tp: 0 };
+        list.push(byName[name]);
+      }
+      return byName[name];
+    }
+    (window.NBCML_ROSTERS || []).forEach(function (team) {
+      (team.players || []).forEach(function (p) {
+        ensure(p.name, team.id);
+      });
+    });
+    (data.players || []).forEach(function (p) {
+      ensure(p.player, p.team);
+    });
+    games.forEach(function (g) {
+      (g.players || []).forEach(function (p) {
+        if (p.sub) return;
+        var s = ensure(p.name, p.team);
+        s.gp += 1;
+        s.tp += Number(p.points) || 0;
+      });
+    });
+    list.forEach(function (s) {
+      s.avg = s.gp ? s.tp / s.gp : 0;
+    });
+    return list;
+  }
+
+  var players = deriveFromGames() || (data.players || []).slice();
+  players.forEach(function (p) {
+    p.tp = Number(p.tp) || 0;
+    p.gp = Number(p.gp) || 0;
+    p.avg = p.avg != null ? Number(p.avg) : p.gp ? p.tp / p.gp : 0;
+  });
+
+  /** Official order: total points desc, then PPG desc, then name A→Z. */
+  function defaultCmp(a, b) {
+    if (b.tp !== a.tp) return b.tp - a.tp;
+    if (b.avg !== a.avg) return b.avg - a.avg;
+    var an = String(a.player || "").toLowerCase();
+    var bn = String(b.player || "").toLowerCase();
+    if (an < bn) return -1;
+    if (an > bn) return 1;
+    return 0;
+  }
+  players.sort(defaultCmp).forEach(function (p, i) {
+    p.rank = i + 1;
+  });
+
+  var sortKey = "tp";
+  var sortDir = "desc";
 
   function cmp(a, b) {
     var av;
@@ -78,12 +137,8 @@
     }
     if (av < bv) return sortDir === "asc" ? -1 : 1;
     if (av > bv) return sortDir === "asc" ? 1 : -1;
-    // Stable-ish tie-break by name
-    var an = String(a.player || "").toLowerCase();
-    var bn = String(b.player || "").toLowerCase();
-    if (an < bn) return -1;
-    if (an > bn) return 1;
-    return 0;
+    // Ties fall back to the official order (pts, PPG, name)
+    return a.rank - b.rank;
   }
 
   function updateHeaderState() {

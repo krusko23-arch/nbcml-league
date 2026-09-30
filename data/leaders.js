@@ -325,19 +325,19 @@ window.NBCML_LEADERS = {
       "rank": 40
     },
     {
-      "player": "Frank Vucko",
-      "team": 1,
-      "gp": 2,
-      "tp": 4,
-      "avg": 2,
-      "rank": 41
-    },
-    {
       "player": "Jason Scott",
       "team": 6,
       "gp": 1,
       "tp": 4,
       "avg": 4,
+      "rank": 41
+    },
+    {
+      "player": "Frank Vucko",
+      "team": 1,
+      "gp": 2,
+      "tp": 4,
+      "avg": 2,
       "rank": 42
     },
     {
