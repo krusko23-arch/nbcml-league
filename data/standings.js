@@ -33,6 +33,19 @@ window.NBCML_STANDINGS = {
     },
     {
       "seed": 3,
+      "team": 5,
+      "captain": "Henry Wong",
+      "w": 1,
+      "l": 1,
+      "t": 0,
+      "ppg": 78.0,
+      "opp_ppg": 79.5,
+      "tp": 2,
+      "gbl": 1,
+      "streak": "1 L"
+    },
+    {
+      "seed": 4,
       "team": 6,
       "captain": "Nik Klyushkin",
       "w": 1,
@@ -45,7 +58,7 @@ window.NBCML_STANDINGS = {
       "streak": "1 W"
     },
     {
-      "seed": 4,
+      "seed": 5,
       "team": 2,
       "captain": "Paul Pappas",
       "w": 1,
@@ -53,19 +66,6 @@ window.NBCML_STANDINGS = {
       "t": 0,
       "ppg": 72.0,
       "opp_ppg": 72.5,
-      "tp": 2,
-      "gbl": 1,
-      "streak": "1 L"
-    },
-    {
-      "seed": 5,
-      "team": 5,
-      "captain": "Henry Wong",
-      "w": 1,
-      "l": 1,
-      "t": 0,
-      "ppg": 78.0,
-      "opp_ppg": 79.5,
       "tp": 2,
       "gbl": 1,
       "streak": "1 L"
