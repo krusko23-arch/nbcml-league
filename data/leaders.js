@@ -2,7 +2,7 @@
 window.NBCML_LEADERS = {
   "season": "2026-27",
   "label": "2026-27 Player Stats",
-  "note": "After Week 2 (29-Sep-26). Week 1 aligned to club Scoring by Team (NBAStatsTeamx.htm); Week 2 from scoresheets (club page pending). Subs not counted. DNP = 0 GP.",
+  "note": "After Week 2 (29-Sep-26). Week 1 aligned to club Scoring by Team (NBAStatsTeamx.htm); Week 2 from scoresheets (club page pending). Sorted by PPG. Subs not counted. DNP = 0 GP.",
   "players": [
     {
       "player": "Damon Navi",
@@ -13,12 +13,20 @@ window.NBCML_LEADERS = {
       "rank": 1
     },
     {
+      "player": "Raja Shnoudeh",
+      "team": 5,
+      "gp": 1,
+      "tp": 28,
+      "avg": 28,
+      "rank": 2
+    },
+    {
       "player": "Ian Mayers",
       "team": 3,
       "gp": 2,
       "tp": 49,
       "avg": 24.5,
-      "rank": 2
+      "rank": 3
     },
     {
       "player": "Nik Klyushkin",
@@ -26,7 +34,7 @@ window.NBCML_LEADERS = {
       "gp": 2,
       "tp": 49,
       "avg": 24.5,
-      "rank": 3
+      "rank": 4
     },
     {
       "player": "Neel Amin",
@@ -34,7 +42,7 @@ window.NBCML_LEADERS = {
       "gp": 2,
       "tp": 41,
       "avg": 20.5,
-      "rank": 4
+      "rank": 5
     },
     {
       "player": "Scott Marven",
@@ -42,7 +50,7 @@ window.NBCML_LEADERS = {
       "gp": 2,
       "tp": 40,
       "avg": 20,
-      "rank": 5
+      "rank": 6
     },
     {
       "player": "James Wang",
@@ -50,7 +58,7 @@ window.NBCML_LEADERS = {
       "gp": 2,
       "tp": 39,
       "avg": 19.5,
-      "rank": 6
+      "rank": 7
     },
     {
       "player": "John Belbeck",
@@ -58,7 +66,7 @@ window.NBCML_LEADERS = {
       "gp": 2,
       "tp": 37,
       "avg": 18.5,
-      "rank": 7
+      "rank": 8
     },
     {
       "player": "Petar Rafajlovic",
@@ -66,7 +74,7 @@ window.NBCML_LEADERS = {
       "gp": 2,
       "tp": 36,
       "avg": 18,
-      "rank": 8
+      "rank": 9
     },
     {
       "player": "Marshall Chen",
@@ -74,7 +82,7 @@ window.NBCML_LEADERS = {
       "gp": 2,
       "tp": 34,
       "avg": 17,
-      "rank": 9
+      "rank": 10
     },
     {
       "player": "Reid Spence",
@@ -82,7 +90,7 @@ window.NBCML_LEADERS = {
       "gp": 2,
       "tp": 34,
       "avg": 17,
-      "rank": 10
+      "rank": 11
     },
     {
       "player": "Mike Purewal",
@@ -90,95 +98,7 @@ window.NBCML_LEADERS = {
       "gp": 2,
       "tp": 32,
       "avg": 16,
-      "rank": 11
-    },
-    {
-      "player": "Bill Katsavos",
-      "team": 2,
-      "gp": 2,
-      "tp": 29,
-      "avg": 14.5,
       "rank": 12
-    },
-    {
-      "player": "Raja Shnoudeh",
-      "team": 5,
-      "gp": 1,
-      "tp": 28,
-      "avg": 28,
-      "rank": 13
-    },
-    {
-      "player": "Dan Gidden",
-      "team": 3,
-      "gp": 2,
-      "tp": 23,
-      "avg": 11.5,
-      "rank": 14
-    },
-    {
-      "player": "John Blair",
-      "team": 4,
-      "gp": 2,
-      "tp": 22,
-      "avg": 11,
-      "rank": 15
-    },
-    {
-      "player": "Evan Hopkins",
-      "team": 4,
-      "gp": 2,
-      "tp": 21,
-      "avg": 10.5,
-      "rank": 16
-    },
-    {
-      "player": "Karma Patel",
-      "team": 3,
-      "gp": 2,
-      "tp": 21,
-      "avg": 10.5,
-      "rank": 17
-    },
-    {
-      "player": "Rick Spence",
-      "team": 5,
-      "gp": 2,
-      "tp": 18,
-      "avg": 9,
-      "rank": 18
-    },
-    {
-      "player": "Anatoliy Sobolev",
-      "team": 2,
-      "gp": 2,
-      "tp": 17,
-      "avg": 8.5,
-      "rank": 19
-    },
-    {
-      "player": "Danny Grimes",
-      "team": 2,
-      "gp": 2,
-      "tp": 17,
-      "avg": 8.5,
-      "rank": 20
-    },
-    {
-      "player": "Eagle Yeh",
-      "team": 1,
-      "gp": 2,
-      "tp": 17,
-      "avg": 8.5,
-      "rank": 21
-    },
-    {
-      "player": "Paulo Carvalho",
-      "team": 2,
-      "gp": 2,
-      "tp": 17,
-      "avg": 8.5,
-      "rank": 22
     },
     {
       "player": "Brian Wilson",
@@ -186,7 +106,7 @@ window.NBCML_LEADERS = {
       "gp": 1,
       "tp": 16,
       "avg": 16,
-      "rank": 23
+      "rank": 13
     },
     {
       "player": "Shadi Almashni",
@@ -194,39 +114,15 @@ window.NBCML_LEADERS = {
       "gp": 1,
       "tp": 16,
       "avg": 16,
-      "rank": 24
+      "rank": 14
     },
     {
-      "player": "Richard Young",
-      "team": 1,
+      "player": "Bill Katsavos",
+      "team": 2,
       "gp": 2,
-      "tp": 15,
-      "avg": 7.5,
-      "rank": 25
-    },
-    {
-      "player": "Frank Caldarola",
-      "team": 1,
-      "gp": 2,
-      "tp": 14,
-      "avg": 7,
-      "rank": 26
-    },
-    {
-      "player": "Henry Wong",
-      "team": 5,
-      "gp": 2,
-      "tp": 14,
-      "avg": 7,
-      "rank": 27
-    },
-    {
-      "player": "RJ Rojas",
-      "team": 6,
-      "gp": 2,
-      "tp": 14,
-      "avg": 7,
-      "rank": 28
+      "tp": 29,
+      "avg": 14.5,
+      "rank": 15
     },
     {
       "player": "Marc Mercanti",
@@ -234,47 +130,47 @@ window.NBCML_LEADERS = {
       "gp": 1,
       "tp": 13,
       "avg": 13,
-      "rank": 29
+      "rank": 16
     },
     {
-      "player": "Colin Andruniak",
+      "player": "Dan Gidden",
       "team": 3,
       "gp": 2,
-      "tp": 12,
-      "avg": 6,
-      "rank": 30
+      "tp": 23,
+      "avg": 11.5,
+      "rank": 17
     },
     {
-      "player": "Jacob Alajajian",
-      "team": 6,
+      "player": "John Blair",
+      "team": 4,
       "gp": 2,
-      "tp": 12,
-      "avg": 6,
-      "rank": 31
+      "tp": 22,
+      "avg": 11,
+      "rank": 18
     },
     {
-      "player": "Rob Larson",
-      "team": 2,
+      "player": "Evan Hopkins",
+      "team": 4,
       "gp": 2,
-      "tp": 11,
-      "avg": 5.5,
-      "rank": 32
+      "tp": 21,
+      "avg": 10.5,
+      "rank": 19
     },
     {
-      "player": "Paul Pappas",
-      "team": 2,
+      "player": "Karma Patel",
+      "team": 3,
       "gp": 2,
-      "tp": 10,
-      "avg": 5,
-      "rank": 33
+      "tp": 21,
+      "avg": 10.5,
+      "rank": 20
     },
     {
-      "player": "Steve Harrison",
-      "team": 1,
+      "player": "Rick Spence",
+      "team": 5,
       "gp": 2,
-      "tp": 10,
-      "avg": 5,
-      "rank": 34
+      "tp": 18,
+      "avg": 9,
+      "rank": 21
     },
     {
       "player": "Chris Robertson",
@@ -282,7 +178,7 @@ window.NBCML_LEADERS = {
       "gp": 1,
       "tp": 9,
       "avg": 9,
-      "rank": 35
+      "rank": 22
     },
     {
       "player": "Jeff Smith",
@@ -290,7 +186,39 @@ window.NBCML_LEADERS = {
       "gp": 1,
       "tp": 9,
       "avg": 9,
-      "rank": 36
+      "rank": 23
+    },
+    {
+      "player": "Anatoliy Sobolev",
+      "team": 2,
+      "gp": 2,
+      "tp": 17,
+      "avg": 8.5,
+      "rank": 24
+    },
+    {
+      "player": "Danny Grimes",
+      "team": 2,
+      "gp": 2,
+      "tp": 17,
+      "avg": 8.5,
+      "rank": 25
+    },
+    {
+      "player": "Eagle Yeh",
+      "team": 1,
+      "gp": 2,
+      "tp": 17,
+      "avg": 8.5,
+      "rank": 26
+    },
+    {
+      "player": "Paulo Carvalho",
+      "team": 2,
+      "gp": 2,
+      "tp": 17,
+      "avg": 8.5,
+      "rank": 27
     },
     {
       "player": "Nick Williams",
@@ -298,15 +226,39 @@ window.NBCML_LEADERS = {
       "gp": 1,
       "tp": 8,
       "avg": 8,
-      "rank": 37
+      "rank": 28
     },
     {
-      "player": "Travis Shao",
+      "player": "Richard Young",
+      "team": 1,
+      "gp": 2,
+      "tp": 15,
+      "avg": 7.5,
+      "rank": 29
+    },
+    {
+      "player": "Frank Caldarola",
+      "team": 1,
+      "gp": 2,
+      "tp": 14,
+      "avg": 7,
+      "rank": 30
+    },
+    {
+      "player": "Henry Wong",
+      "team": 5,
+      "gp": 2,
+      "tp": 14,
+      "avg": 7,
+      "rank": 31
+    },
+    {
+      "player": "RJ Rojas",
       "team": 6,
       "gp": 2,
-      "tp": 8,
-      "avg": 4,
-      "rank": 38
+      "tp": 14,
+      "avg": 7,
+      "rank": 32
     },
     {
       "player": "Emerson Cruz",
@@ -314,15 +266,55 @@ window.NBCML_LEADERS = {
       "gp": 1,
       "tp": 7,
       "avg": 7,
-      "rank": 39
+      "rank": 33
     },
     {
-      "player": "Jordan Huang",
-      "team": 5,
+      "player": "Colin Andruniak",
+      "team": 3,
       "gp": 2,
-      "tp": 7,
-      "avg": 3.5,
-      "rank": 40
+      "tp": 12,
+      "avg": 6,
+      "rank": 34
+    },
+    {
+      "player": "Jacob Alajajian",
+      "team": 6,
+      "gp": 2,
+      "tp": 12,
+      "avg": 6,
+      "rank": 35
+    },
+    {
+      "player": "Rob Larson",
+      "team": 2,
+      "gp": 2,
+      "tp": 11,
+      "avg": 5.5,
+      "rank": 36
+    },
+    {
+      "player": "Paul Pappas",
+      "team": 2,
+      "gp": 2,
+      "tp": 10,
+      "avg": 5,
+      "rank": 37
+    },
+    {
+      "player": "Steve Harrison",
+      "team": 1,
+      "gp": 2,
+      "tp": 10,
+      "avg": 5,
+      "rank": 38
+    },
+    {
+      "player": "Travis Shao",
+      "team": 6,
+      "gp": 2,
+      "tp": 8,
+      "avg": 4,
+      "rank": 39
     },
     {
       "player": "Jason Scott",
@@ -330,6 +322,14 @@ window.NBCML_LEADERS = {
       "gp": 1,
       "tp": 4,
       "avg": 4,
+      "rank": 40
+    },
+    {
+      "player": "Jordan Huang",
+      "team": 5,
+      "gp": 2,
+      "tp": 7,
+      "avg": 3.5,
       "rank": 41
     },
     {

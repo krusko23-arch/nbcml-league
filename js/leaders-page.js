@@ -92,10 +92,10 @@
     p.avg = p.avg != null ? Number(p.avg) : p.gp ? p.tp / p.gp : 0;
   });
 
-  /** Official order: total points desc, then PPG desc, then name A→Z. */
+  /** Official order: PPG desc, then total points desc, then name A→Z. */
   function defaultCmp(a, b) {
-    if (b.tp !== a.tp) return b.tp - a.tp;
     if (b.avg !== a.avg) return b.avg - a.avg;
+    if (b.tp !== a.tp) return b.tp - a.tp;
     var an = String(a.player || "").toLowerCase();
     var bn = String(b.player || "").toLowerCase();
     if (an < bn) return -1;
@@ -106,7 +106,7 @@
     p.rank = i + 1;
   });
 
-  var sortKey = "tp";
+  var sortKey = "avg";
   var sortDir = "desc";
 
   function cmp(a, b) {
@@ -137,7 +137,7 @@
     }
     if (av < bv) return sortDir === "asc" ? -1 : 1;
     if (av > bv) return sortDir === "asc" ? 1 : -1;
-    // Ties fall back to the official order (pts, PPG, name)
+    // Ties fall back to the official order (PPG, pts, name)
     return a.rank - b.rank;
   }
 
