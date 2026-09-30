@@ -1,14 +1,6 @@
 (function () {
   var data = window.NBCML_STANDINGS;
   if (!data) return;
-  var lede = document.getElementById("standings-lede");
-  if (lede) {
-    lede.textContent =
-      (data.label || "Standings") +
-      (data.gamesPlayed ? " · " + data.gamesPlayed + " games played" : "") +
-      ". " +
-      (data.note || "");
-  }
   var tbody = document.querySelector("#standings-table tbody");
   if (!tbody) return;
   var rows = data.standings || [];
