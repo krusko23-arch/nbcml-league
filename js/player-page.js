@@ -73,7 +73,8 @@
           own +
           (isHome ? " vs " : " @ ") +
           "T" +
-          (opp != null ? opp : "?");
+          (opp != null ? opp : "?") +
+          (p.sub ? " (sub)" : "");
         var result;
         if (game.winner == null) result = "T";
         else if (game.winner === own) result = "W";

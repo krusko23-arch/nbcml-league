@@ -115,6 +115,7 @@
           '">' +
           esc(p.name) +
           "</a>" +
+          (p.sub ? ' <span class="sub-tag" style="color:#888;font-weight:normal">(sub)</span>' : "") +
           "</td>" +
           '<td class="num">' +
           esc(p.points) +
