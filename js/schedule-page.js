@@ -10,17 +10,6 @@
       .replace(/"/g, "&quot;");
   }
 
-  function playerHref(name) {
-    if (window.NBCML_playerHref) return window.NBCML_playerHref(name);
-    var slug = String(name || "")
-      .toLowerCase()
-      .normalize("NFKD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-+|-+$/g, "");
-    return "player.html?id=" + encodeURIComponent(slug);
-  }
-
   function teamLink(num, label) {
     if (num == null || num === "") return "—";
     var text = label != null ? label : "T" + num;
@@ -75,26 +64,6 @@
 
   var gamesData = window.NBCML_GAMES;
   var lookup = buildGameLookup(gamesData && gamesData.games);
-
-  var caps = document.getElementById("captain-list");
-  if (caps && data.captains) {
-    caps.innerHTML = Object.keys(data.captains)
-      .sort(function (a, b) {
-        return Number(a) - Number(b);
-      })
-      .map(function (id) {
-        return (
-          '<span class="chip">' +
-          teamLink(id, "T" + id) +
-          ' <a class="player-name-link" href="' +
-          playerHref(data.captains[id]) +
-          '">' +
-          esc(data.captains[id]) +
-          "</a></span>"
-        );
-      })
-      .join("");
-  }
 
   function matchupCell(slotGame, weekNum, date, slot) {
     if (!slotGame) return "—";
