@@ -351,9 +351,9 @@ window.NBCML_LEADERS = {
     {
       "player": "Richard Montoya",
       "team": 4,
-      "gp": 1,
+      "gp": 2,
       "tp": 1,
-      "avg": 1,
+      "avg": 0.5,
       "rank": 44
     },
     {

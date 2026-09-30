@@ -344,13 +344,19 @@ window.NBCML_GAMES = {
         "captain": "Henry Wong"
       },
       "winner": 4,
-      "notes": "From scoresheet (club NBAStatsTeamx.htm not yet updated for Sep-29). Halves T4 45/44, T5 37/44. Belfrutto, Montoya, Holder (T4) and Shnoudeh, Williams (T5) DNP. Mercanti sheet # reads 32 (overwritten); club # 3 used. Final 89–81 (T4).",
+      "notes": "From scoresheet (club NBAStatsTeamx.htm not yet updated for Sep-29). Halves T4 45/44, T5 37/44. Richard Montoya played, 0 pts (retaken sheet shows 0; confirmed by Pete). Belfrutto, Holder (T4) and Shnoudeh, Williams (T5) DNP. Mercanti sheet # reads 32 (overwritten); club # 3 used. Final 89–81 (T4).",
       "players": [
         {
           "team": 4,
           "name": "Evan Hopkins",
           "number": "18",
           "points": 12
+        },
+        {
+          "team": 4,
+          "name": "Richard Montoya",
+          "number": "21",
+          "points": 0
         },
         {
           "team": 4,
@@ -547,7 +553,7 @@ window.NBCML_GAMES = {
         "captain": "Jeff Smith"
       },
       "winner": 3,
-      "notes": "From scoresheet (club NBAStatsTeamx.htm not yet updated for Sep-29). Halves T2 28/44, T3 38/37. Vishal Bhandari: 2 fouls, no points (counted as played, 0). Jeff Smith, George Sparangis, Brian Kleiboer DNP. T3 sub Ben Lauper (6), not counted in individual stats. Sheet #s: Mayers 39 (club 0), Sobolev 37/33 overwritten (club 53) — club #s used. Final 72–75 (T3).",
+      "notes": "From scoresheet (club NBAStatsTeamx.htm not yet updated for Sep-29). Halves T2 28/44, T3 38/37. Vishal Bhandari played, 0 pts (retaken sheet shows 0; confirmed by Pete). Jeff Smith, George Sparangis, Brian Kleiboer DNP. T3 sub Ben Lauper (6), not counted in individual stats. Sheet #s: Mayers 39 (club 0), Sobolev 37/33 overwritten (club 53) — club #s used. Final 72–75 (T3).",
       "players": [
         {
           "team": 2,
