@@ -54,11 +54,14 @@
     return players
       .map(function (p) {
         return (
-          '<li><span><a class="hl-name player-name-link" href="' +
-          playerHref(p.name) +
-          '">' +
-          esc(p.name) +
-          "</a>" +
+          "<li><span>" +
+          (p.unlisted
+            ? '<span class="hl-name">' + esc(p.name) + "</span>"
+            : '<a class="hl-name player-name-link" href="' +
+              playerHref(p.name) +
+              '">' +
+              esc(p.name) +
+              "</a>") +
           (p.sub ? ' <span class="sub-tag" style="color:#888;font-weight:normal">(sub)</span>' : "") +
           '</span><span class="hl-pts">' +
           esc(p.points) +

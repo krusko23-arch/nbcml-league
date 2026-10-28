@@ -60,7 +60,7 @@
   if (gamesData && gamesData.games) {
     gamesData.games.forEach(function (game) {
       (game.players || []).forEach(function (p) {
-        if (playerSlug(p.name) !== targetSlug) return;
+        if (p.unlisted || playerSlug(p.name) !== targetSlug) return;
         displayName = displayName || p.name;
         teamFromGames = teamFromGames != null ? teamFromGames : p.team;
         var own = p.team;

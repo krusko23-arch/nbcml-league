@@ -1,6 +1,7 @@
 /**
  * NBCML / Newmarket YNBA Men's League — 2026-27 Rosters
  * Captains marked with captain: true (shown as (C) on the page).
+ * status: "IR" = Injured Reserve, "RIR" = Return from Injured Reserve (per club roster, Oct 2026).
  */
 window.NBCML_ROSTERS = [
   {
@@ -38,10 +39,10 @@ window.NBCML_ROSTERS = [
     name: "Team 3",
     color: "#f5e6a3",
     players: [
+      { name: "Ben Lauper", captain: false, status: "IR" },
       { name: "Brian Kleiboer", captain: false },
       { name: "Colin Andruniak", captain: false },
       { name: "Dan Gidden", captain: false },
-      { name: "George Sparangis", captain: false },
       { name: "Ian Mayers", captain: false },
       { name: "Jeff Smith", captain: true },
       { name: "Karma Patel", captain: false },
@@ -88,8 +89,9 @@ window.NBCML_ROSTERS = [
       { name: "Jacob Alajajian", captain: false },
       { name: "Jason Scott", captain: false },
       { name: "Nik Klyushkin", captain: true },
+      { name: "Patric Rossouw", captain: false, status: "RIR" },
       { name: "RJ Rojas", captain: false },
-      { name: "Shadi Almashni", captain: false },
+      { name: "Shadi Almashni", captain: false, status: "IR" },
       { name: "Travis Shao", captain: false }
     ]
   }

@@ -1,8 +1,8 @@
-/** NBCML game results — 2026-27 Weeks 1–2 */
+/** NBCML game results — 2026-27 Weeks 1–5 */
 window.NBCML_GAMES = {
   "season": "2026-27",
-  "source": "Week 1 (22-Sep-26) aligned to club NBAStatsTeamx.htm (Sep-22 column). DNPs omitted from box (Robertson, Sparangis, Kleiboer, Mercanti, Wilson, Scott). T1 Petar 19 / Young 5; T4 Belbeck 19, Purewal 7, Hopkins 9, Blair 9, Belfrutto 0, Damon 41. Week 2 (29-Sep-26) from scoresheets (club page not yet updated); subs flagged sub:true and excluded from Player Stats.",
-  "gameCount": 6,
+  "source": "Week 1 (22-Sep-26) aligned to club NBAStatsTeamx.htm (Sep-22 column). Week 2 (29-Sep-26) from scoresheets, re-checked against club Sep-29 column (points match; Ben Lauper counted as T3 roster player; T6 sub credited as club \"Other\"). Weeks 3–5 (6/13/20-Oct-26) from club NBAStatsTeamx.htm per-date columns (fetched 28-Oct-26). DNP = club \"-\" (omitted from box). Subs flagged sub:true and excluded from Player Stats; unnamed subs = club \"Other\" row (unlisted:true).",
+  "gameCount": 15,
   "games": [
     {
       "id": "2026-09-22-early",
@@ -344,7 +344,7 @@ window.NBCML_GAMES = {
         "captain": "Henry Wong"
       },
       "winner": 4,
-      "notes": "From scoresheet (club NBAStatsTeamx.htm not yet updated for Sep-29). Halves T4 45/44, T5 37/44. Richard Montoya played, 0 pts (retaken sheet shows 0; confirmed by Pete). Belfrutto, Holder (T4) and Shnoudeh, Williams (T5) DNP. Mercanti sheet # reads 32 (overwritten); club # 3 used. Final 89–81 (T4).",
+      "notes": "From scoresheet; checked against club NBAStatsTeamx.htm Sep-29 column (all points match). Halves T4 45/44, T5 37/44. Richard Montoya played, 0 pts (retaken sheet shows 0; confirmed by Pete). Belfrutto, Holder (T4) and Shnoudeh, Williams (T5) DNP. Mercanti sheet # reads 32 (overwritten); club # 3 used. Final 89–81 (T4).",
       "players": [
         {
           "team": 4,
@@ -439,7 +439,7 @@ window.NBCML_GAMES = {
         "captain": "Nik Klyushkin"
       },
       "winner": 6,
-      "notes": "From scoresheet (club NBAStatsTeamx.htm not yet updated for Sep-29). Sheet marks T6 Home / T1 Away; schedule order kept. Halves T1 36/39, T6 50/30. Frank Vucko played, 0 pts. Shadi Almashni & Emerson Cruz DNP. T6 sub \"Ian\" (24) — per sheet note he was due to scorekeep and played instead; recorded as Ian Mayers (sub), not counted in his individual stats. Final 75–80 (T6).",
+      "notes": "From scoresheet; checked against club NBAStatsTeamx.htm Sep-29 column (all points match). Sheet marks T6 Home / T1 Away; schedule order kept. Halves T1 36/39, T6 50/30. Frank Vucko played, 0 pts. Shadi Almashni & Emerson Cruz DNP. T6 sub \"Ian\" (24) — sheet note says he was due to scorekeep and played instead; club credits these 24 to T6 \"Other\" (not to Ian Mayers), so shown as Other (sub), not in individual stats. Final 75–80 (T6).",
       "players": [
         {
           "team": 1,
@@ -527,10 +527,11 @@ window.NBCML_GAMES = {
         },
         {
           "team": 6,
-          "name": "Ian Mayers",
+          "name": "Other",
           "number": "",
           "points": 24,
-          "sub": true
+          "sub": true,
+          "unlisted": true
         }
       ]
     },
@@ -553,7 +554,7 @@ window.NBCML_GAMES = {
         "captain": "Jeff Smith"
       },
       "winner": 3,
-      "notes": "From scoresheet (club NBAStatsTeamx.htm not yet updated for Sep-29). Halves T2 28/44, T3 38/37. Vishal Bhandari played, 0 pts (retaken sheet shows 0; confirmed by Pete). Jeff Smith, George Sparangis, Brian Kleiboer DNP. T3 sub Ben Lauper (6), not counted in individual stats. Sheet #s: Mayers 39 (club 0), Sobolev 37/33 overwritten (club 53) — club #s used. Final 72–75 (T3).",
+      "notes": "From scoresheet; checked against club NBAStatsTeamx.htm Sep-29 column (all points match). Halves T2 28/44, T3 38/37. Vishal Bhandari played, 0 pts (retaken sheet shows 0; confirmed by Pete). Jeff Smith, George Sparangis, Brian Kleiboer DNP. Ben Lauper (6) — club lists him on the T3 roster (#45, now IR) and credits his points, so counted as a T3 player (not a sub). Sheet #s: Mayers 39 (club 0), Sobolev 37/33 overwritten (club 53) — club #s used. Final 72–75 (T3).",
       "players": [
         {
           "team": 2,
@@ -636,9 +637,925 @@ window.NBCML_GAMES = {
         {
           "team": 3,
           "name": "Ben Lauper",
-          "number": "4",
+          "number": "45",
+          "points": 6
+        }
+      ]
+    },
+    {
+      "id": "2026-10-06-early",
+      "week": 3,
+      "date": "6-Oct-26",
+      "isoDate": "2026-10-06",
+      "dateLabel": "Oct-6",
+      "slot": "early",
+      "time": "6:30 pm",
+      "home": {
+        "team": 1,
+        "score": 76,
+        "captain": "Chris Robertson"
+      },
+      "away": {
+        "team": 3,
+        "score": 65,
+        "captain": "Jeff Smith"
+      },
+      "winner": 1,
+      "notes": "From club NBAStatsTeamx.htm (Oct-6 column); no scoresheet. T1 DNP: Scott Marven, Frank Vucko. T3 DNP: Jeff Smith, Brian Kleiboer, Neel Amin. T3 sub(s) credited as club \"Other\": 6 pts (names not listed), not in individual stats. Final 76–65 (T1).",
+      "players": [
+        {
+          "team": 1,
+          "name": "Chris Robertson",
+          "number": "6",
+          "points": 26
+        },
+        {
+          "team": 1,
+          "name": "Frank Caldarola",
+          "number": "13",
+          "points": 2
+        },
+        {
+          "team": 1,
+          "name": "Eagle Yeh",
+          "number": "30",
+          "points": 20
+        },
+        {
+          "team": 1,
+          "name": "Steve Harrison",
+          "number": "42",
+          "points": 4
+        },
+        {
+          "team": 1,
+          "name": "Petar Rafajlovic",
+          "number": "47",
+          "points": 11
+        },
+        {
+          "team": 1,
+          "name": "Richard Young",
+          "number": "58",
+          "points": 13
+        },
+        {
+          "team": 3,
+          "name": "Karma Patel",
+          "number": "15",
+          "points": 11
+        },
+        {
+          "team": 3,
+          "name": "Ben Lauper",
+          "number": "45",
+          "points": 4
+        },
+        {
+          "team": 3,
+          "name": "Ian Mayers",
+          "number": "0",
+          "points": 27
+        },
+        {
+          "team": 3,
+          "name": "Colin Andruniak",
+          "number": "53",
+          "points": 8
+        },
+        {
+          "team": 3,
+          "name": "Dan Gidden",
+          "number": "70",
+          "points": 9
+        },
+        {
+          "team": 3,
+          "name": "Other",
+          "number": "",
           "points": 6,
-          "sub": true
+          "sub": true,
+          "unlisted": true
+        }
+      ]
+    },
+    {
+      "id": "2026-10-06-middle",
+      "week": 3,
+      "date": "6-Oct-26",
+      "isoDate": "2026-10-06",
+      "dateLabel": "Oct-6",
+      "slot": "middle",
+      "time": "7:40 pm",
+      "home": {
+        "team": 2,
+        "score": 53,
+        "captain": "Paul Pappas"
+      },
+      "away": {
+        "team": 5,
+        "score": 45,
+        "captain": "Henry Wong"
+      },
+      "winner": 2,
+      "notes": "From club NBAStatsTeamx.htm (Oct-6 column); no scoresheet. T2 DNP: Rob Larson. T2 played, 0 pts: Anatoliy Sobolev. T5 played, 0 pts: Jordan Huang, Nick Williams. Final 53–45 (T2).",
+      "players": [
+        {
+          "team": 2,
+          "name": "Paulo Carvalho",
+          "number": "8",
+          "points": 7
+        },
+        {
+          "team": 2,
+          "name": "Vishal Bhandari",
+          "number": "9",
+          "points": 8
+        },
+        {
+          "team": 2,
+          "name": "Bill Katsavos",
+          "number": "14",
+          "points": 10
+        },
+        {
+          "team": 2,
+          "name": "Anatoliy Sobolev",
+          "number": "53",
+          "points": 0
+        },
+        {
+          "team": 2,
+          "name": "Paul Pappas",
+          "number": "50",
+          "points": 5
+        },
+        {
+          "team": 2,
+          "name": "James Wang",
+          "number": "68",
+          "points": 16
+        },
+        {
+          "team": 2,
+          "name": "Danny Grimes",
+          "number": "48",
+          "points": 7
+        },
+        {
+          "team": 5,
+          "name": "Marc Mercanti",
+          "number": "3",
+          "points": 15
+        },
+        {
+          "team": 5,
+          "name": "Marshall Chen",
+          "number": "11",
+          "points": 7
+        },
+        {
+          "team": 5,
+          "name": "Jordan Huang",
+          "number": "23",
+          "points": 0
+        },
+        {
+          "team": 5,
+          "name": "Henry Wong",
+          "number": "32",
+          "points": 8
+        },
+        {
+          "team": 5,
+          "name": "Rick Spence",
+          "number": "35",
+          "points": 1
+        },
+        {
+          "team": 5,
+          "name": "Reid Spence",
+          "number": "46",
+          "points": 8
+        },
+        {
+          "team": 5,
+          "name": "Raja Shnoudeh",
+          "number": "57",
+          "points": 6
+        },
+        {
+          "team": 5,
+          "name": "Nick Williams",
+          "number": "44",
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "2026-10-06-late",
+      "week": 3,
+      "date": "6-Oct-26",
+      "isoDate": "2026-10-06",
+      "dateLabel": "Oct-6",
+      "slot": "late",
+      "time": "8:50 pm",
+      "home": {
+        "team": 4,
+        "score": 75,
+        "captain": "John Belbeck"
+      },
+      "away": {
+        "team": 6,
+        "score": 85,
+        "captain": "Nik Klyushkin"
+      },
+      "winner": 6,
+      "notes": "From club NBAStatsTeamx.htm (Oct-6 column); no scoresheet. T4 DNP: Richard Montoya, Mike Purewal, Mike Holder. T4 sub(s) credited as club \"Other\": 1 pts (names not listed), not in individual stats. T6 DNP: Shadi Almashni, Emerson Cruz, RJ Rojas, Patric Rossouw. T6 sub(s) credited as club \"Other\": 12 pts (names not listed), not in individual stats. Final 75–85 (T6).",
+      "players": [
+        {
+          "team": 4,
+          "name": "Pasquale Belfrutto",
+          "number": "2",
+          "points": 2
+        },
+        {
+          "team": 4,
+          "name": "Evan Hopkins",
+          "number": "18",
+          "points": 13
+        },
+        {
+          "team": 4,
+          "name": "John Belbeck",
+          "number": "33",
+          "points": 16
+        },
+        {
+          "team": 4,
+          "name": "Damon Navi",
+          "number": "41",
+          "points": 29
+        },
+        {
+          "team": 4,
+          "name": "John Blair",
+          "number": "45",
+          "points": 14
+        },
+        {
+          "team": 4,
+          "name": "Other",
+          "number": "",
+          "points": 1,
+          "sub": true,
+          "unlisted": true
+        },
+        {
+          "team": 6,
+          "name": "Jacob Alajajian",
+          "number": "4",
+          "points": 3
+        },
+        {
+          "team": 6,
+          "name": "Nik Klyushkin",
+          "number": "17",
+          "points": 20
+        },
+        {
+          "team": 6,
+          "name": "Brian Wilson",
+          "number": "25",
+          "points": 32
+        },
+        {
+          "team": 6,
+          "name": "Jason Scott",
+          "number": "55",
+          "points": 12
+        },
+        {
+          "team": 6,
+          "name": "Travis Shao",
+          "number": "1",
+          "points": 6
+        },
+        {
+          "team": 6,
+          "name": "Other",
+          "number": "",
+          "points": 12,
+          "sub": true,
+          "unlisted": true
+        }
+      ]
+    },
+    {
+      "id": "2026-10-13-early",
+      "week": 4,
+      "date": "13-Oct-26",
+      "isoDate": "2026-10-13",
+      "dateLabel": "Oct-13",
+      "slot": "early",
+      "time": "6:30 pm",
+      "home": {
+        "team": 2,
+        "score": 55,
+        "captain": "Paul Pappas"
+      },
+      "away": {
+        "team": 6,
+        "score": 36,
+        "captain": "Nik Klyushkin"
+      },
+      "winner": 2,
+      "notes": "From club NBAStatsTeamx.htm (Oct-13 column); no scoresheet. T2 DNP: Rob Larson. T6 DNP: RJ Rojas, Patric Rossouw. T6 played, 0 pts: Travis Shao. Final 55–36 (T2).",
+      "players": [
+        {
+          "team": 2,
+          "name": "Paulo Carvalho",
+          "number": "8",
+          "points": 14
+        },
+        {
+          "team": 2,
+          "name": "Vishal Bhandari",
+          "number": "9",
+          "points": 2
+        },
+        {
+          "team": 2,
+          "name": "Bill Katsavos",
+          "number": "14",
+          "points": 7
+        },
+        {
+          "team": 2,
+          "name": "Anatoliy Sobolev",
+          "number": "53",
+          "points": 12
+        },
+        {
+          "team": 2,
+          "name": "Paul Pappas",
+          "number": "50",
+          "points": 4
+        },
+        {
+          "team": 2,
+          "name": "James Wang",
+          "number": "68",
+          "points": 13
+        },
+        {
+          "team": 2,
+          "name": "Danny Grimes",
+          "number": "48",
+          "points": 3
+        },
+        {
+          "team": 6,
+          "name": "Shadi Almashni",
+          "number": "3",
+          "points": 2
+        },
+        {
+          "team": 6,
+          "name": "Jacob Alajajian",
+          "number": "4",
+          "points": 2
+        },
+        {
+          "team": 6,
+          "name": "Nik Klyushkin",
+          "number": "17",
+          "points": 11
+        },
+        {
+          "team": 6,
+          "name": "Emerson Cruz",
+          "number": "19",
+          "points": 3
+        },
+        {
+          "team": 6,
+          "name": "Brian Wilson",
+          "number": "25",
+          "points": 14
+        },
+        {
+          "team": 6,
+          "name": "Jason Scott",
+          "number": "55",
+          "points": 4
+        },
+        {
+          "team": 6,
+          "name": "Travis Shao",
+          "number": "1",
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "2026-10-13-middle",
+      "week": 4,
+      "date": "13-Oct-26",
+      "isoDate": "2026-10-13",
+      "dateLabel": "Oct-13",
+      "slot": "middle",
+      "time": "7:40 pm",
+      "home": {
+        "team": 1,
+        "score": 55,
+        "captain": "Chris Robertson"
+      },
+      "away": {
+        "team": 4,
+        "score": 83,
+        "captain": "John Belbeck"
+      },
+      "winner": 4,
+      "notes": "From club NBAStatsTeamx.htm (Oct-13 column); no scoresheet. T1 DNP: Petar Rafajlovic. T1 played, 0 pts: Frank Caldarola. T4 DNP: Pasquale Belfrutto, Mike Holder. Final 55–83 (T4).",
+      "players": [
+        {
+          "team": 1,
+          "name": "Scott Marven",
+          "number": "5",
+          "points": 8
+        },
+        {
+          "team": 1,
+          "name": "Chris Robertson",
+          "number": "6",
+          "points": 8
+        },
+        {
+          "team": 1,
+          "name": "Frank Caldarola",
+          "number": "13",
+          "points": 0
+        },
+        {
+          "team": 1,
+          "name": "Frank Vucko",
+          "number": "28",
+          "points": 8
+        },
+        {
+          "team": 1,
+          "name": "Eagle Yeh",
+          "number": "30",
+          "points": 2
+        },
+        {
+          "team": 1,
+          "name": "Steve Harrison",
+          "number": "42",
+          "points": 11
+        },
+        {
+          "team": 1,
+          "name": "Richard Young",
+          "number": "58",
+          "points": 18
+        },
+        {
+          "team": 4,
+          "name": "Evan Hopkins",
+          "number": "18",
+          "points": 10
+        },
+        {
+          "team": 4,
+          "name": "Richard Montoya",
+          "number": "21",
+          "points": 3
+        },
+        {
+          "team": 4,
+          "name": "John Belbeck",
+          "number": "33",
+          "points": 5
+        },
+        {
+          "team": 4,
+          "name": "Mike Purewal",
+          "number": "34",
+          "points": 21
+        },
+        {
+          "team": 4,
+          "name": "Damon Navi",
+          "number": "41",
+          "points": 28
+        },
+        {
+          "team": 4,
+          "name": "John Blair",
+          "number": "45",
+          "points": 16
+        }
+      ]
+    },
+    {
+      "id": "2026-10-13-late",
+      "week": 4,
+      "date": "13-Oct-26",
+      "isoDate": "2026-10-13",
+      "dateLabel": "Oct-13",
+      "slot": "late",
+      "time": "8:50 pm",
+      "home": {
+        "team": 3,
+        "score": 97,
+        "captain": "Jeff Smith"
+      },
+      "away": {
+        "team": 5,
+        "score": 94,
+        "captain": "Henry Wong"
+      },
+      "winner": 3,
+      "notes": "From club NBAStatsTeamx.htm (Oct-13 column); no scoresheet. T3 DNP: Karma Patel, Jeff Smith, Brian Kleiboer. T5 DNP: Marshall Chen, Nick Williams. Final 97–94 (T3).",
+      "players": [
+        {
+          "team": 3,
+          "name": "Ben Lauper",
+          "number": "45",
+          "points": 4
+        },
+        {
+          "team": 3,
+          "name": "Ian Mayers",
+          "number": "0",
+          "points": 39
+        },
+        {
+          "team": 3,
+          "name": "Colin Andruniak",
+          "number": "53",
+          "points": 10
+        },
+        {
+          "team": 3,
+          "name": "Dan Gidden",
+          "number": "70",
+          "points": 22
+        },
+        {
+          "team": 3,
+          "name": "Neel Amin",
+          "number": "43",
+          "points": 22
+        },
+        {
+          "team": 5,
+          "name": "Marc Mercanti",
+          "number": "3",
+          "points": 33
+        },
+        {
+          "team": 5,
+          "name": "Jordan Huang",
+          "number": "23",
+          "points": 8
+        },
+        {
+          "team": 5,
+          "name": "Henry Wong",
+          "number": "32",
+          "points": 8
+        },
+        {
+          "team": 5,
+          "name": "Rick Spence",
+          "number": "35",
+          "points": 12
+        },
+        {
+          "team": 5,
+          "name": "Reid Spence",
+          "number": "46",
+          "points": 19
+        },
+        {
+          "team": 5,
+          "name": "Raja Shnoudeh",
+          "number": "57",
+          "points": 14
+        }
+      ]
+    },
+    {
+      "id": "2026-10-20-early",
+      "week": 5,
+      "date": "20-Oct-26",
+      "isoDate": "2026-10-20",
+      "dateLabel": "Oct-20",
+      "slot": "early",
+      "time": "6:30 pm",
+      "home": {
+        "team": 1,
+        "score": 91,
+        "captain": "Chris Robertson"
+      },
+      "away": {
+        "team": 5,
+        "score": 86,
+        "captain": "Henry Wong"
+      },
+      "winner": 1,
+      "notes": "From club NBAStatsTeamx.htm (Oct-20 column); no scoresheet. T1 DNP: Frank Caldarola. T5 DNP: Marc Mercanti, Rick Spence, Reid Spence. T5 sub(s) credited as club \"Other\": 12 pts (names not listed), not in individual stats. Final 91–86 (T1).",
+      "players": [
+        {
+          "team": 1,
+          "name": "Scott Marven",
+          "number": "5",
+          "points": 16
+        },
+        {
+          "team": 1,
+          "name": "Chris Robertson",
+          "number": "6",
+          "points": 20
+        },
+        {
+          "team": 1,
+          "name": "Frank Vucko",
+          "number": "28",
+          "points": 11
+        },
+        {
+          "team": 1,
+          "name": "Eagle Yeh",
+          "number": "30",
+          "points": 8
+        },
+        {
+          "team": 1,
+          "name": "Steve Harrison",
+          "number": "42",
+          "points": 2
+        },
+        {
+          "team": 1,
+          "name": "Petar Rafajlovic",
+          "number": "47",
+          "points": 29
+        },
+        {
+          "team": 1,
+          "name": "Richard Young",
+          "number": "58",
+          "points": 5
+        },
+        {
+          "team": 5,
+          "name": "Marshall Chen",
+          "number": "11",
+          "points": 26
+        },
+        {
+          "team": 5,
+          "name": "Jordan Huang",
+          "number": "23",
+          "points": 5
+        },
+        {
+          "team": 5,
+          "name": "Henry Wong",
+          "number": "32",
+          "points": 10
+        },
+        {
+          "team": 5,
+          "name": "Raja Shnoudeh",
+          "number": "57",
+          "points": 23
+        },
+        {
+          "team": 5,
+          "name": "Nick Williams",
+          "number": "44",
+          "points": 10
+        },
+        {
+          "team": 5,
+          "name": "Other",
+          "number": "",
+          "points": 12,
+          "sub": true,
+          "unlisted": true
+        }
+      ]
+    },
+    {
+      "id": "2026-10-20-middle",
+      "week": 5,
+      "date": "20-Oct-26",
+      "isoDate": "2026-10-20",
+      "dateLabel": "Oct-20",
+      "slot": "middle",
+      "time": "7:40 pm",
+      "home": {
+        "team": 3,
+        "score": 59,
+        "captain": "Jeff Smith"
+      },
+      "away": {
+        "team": 6,
+        "score": 64,
+        "captain": "Nik Klyushkin"
+      },
+      "winner": 6,
+      "notes": "From club NBAStatsTeamx.htm (Oct-20 column); no scoresheet. T3 DNP: Ben Lauper. T6 DNP: Shadi Almashni. T6 played, 0 pts: RJ Rojas. Final 59–64 (T6).",
+      "players": [
+        {
+          "team": 3,
+          "name": "Karma Patel",
+          "number": "15",
+          "points": 5
+        },
+        {
+          "team": 3,
+          "name": "Jeff Smith",
+          "number": "20",
+          "points": 2
+        },
+        {
+          "team": 3,
+          "name": "Ian Mayers",
+          "number": "0",
+          "points": 20
+        },
+        {
+          "team": 3,
+          "name": "Brian Kleiboer",
+          "number": "52",
+          "points": 2
+        },
+        {
+          "team": 3,
+          "name": "Colin Andruniak",
+          "number": "53",
+          "points": 6
+        },
+        {
+          "team": 3,
+          "name": "Dan Gidden",
+          "number": "70",
+          "points": 12
+        },
+        {
+          "team": 3,
+          "name": "Neel Amin",
+          "number": "43",
+          "points": 12
+        },
+        {
+          "team": 6,
+          "name": "Jacob Alajajian",
+          "number": "4",
+          "points": 2
+        },
+        {
+          "team": 6,
+          "name": "Nik Klyushkin",
+          "number": "17",
+          "points": 17
+        },
+        {
+          "team": 6,
+          "name": "Emerson Cruz",
+          "number": "19",
+          "points": 8
+        },
+        {
+          "team": 6,
+          "name": "Brian Wilson",
+          "number": "25",
+          "points": 23
+        },
+        {
+          "team": 6,
+          "name": "RJ Rojas",
+          "number": "26",
+          "points": 0
+        },
+        {
+          "team": 6,
+          "name": "Jason Scott",
+          "number": "55",
+          "points": 2
+        },
+        {
+          "team": 6,
+          "name": "Travis Shao",
+          "number": "1",
+          "points": 2
+        },
+        {
+          "team": 6,
+          "name": "Patric Rossouw",
+          "number": "31",
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "2026-10-20-late",
+      "week": 5,
+      "date": "20-Oct-26",
+      "isoDate": "2026-10-20",
+      "dateLabel": "Oct-20",
+      "slot": "late",
+      "time": "8:50 pm",
+      "home": {
+        "team": 2,
+        "score": 61,
+        "captain": "Paul Pappas"
+      },
+      "away": {
+        "team": 4,
+        "score": 69,
+        "captain": "John Belbeck"
+      },
+      "winner": 4,
+      "notes": "From club NBAStatsTeamx.htm (Oct-20 column); no scoresheet. T2 DNP: Rob Larson, James Wang. T4 DNP: Mike Purewal, Mike Holder. T4 played, 0 pts: Richard Montoya. Final 61–69 (T4).",
+      "players": [
+        {
+          "team": 2,
+          "name": "Paulo Carvalho",
+          "number": "8",
+          "points": 8
+        },
+        {
+          "team": 2,
+          "name": "Vishal Bhandari",
+          "number": "9",
+          "points": 10
+        },
+        {
+          "team": 2,
+          "name": "Bill Katsavos",
+          "number": "14",
+          "points": 4
+        },
+        {
+          "team": 2,
+          "name": "Anatoliy Sobolev",
+          "number": "53",
+          "points": 16
+        },
+        {
+          "team": 2,
+          "name": "Paul Pappas",
+          "number": "50",
+          "points": 9
+        },
+        {
+          "team": 2,
+          "name": "Danny Grimes",
+          "number": "48",
+          "points": 14
+        },
+        {
+          "team": 4,
+          "name": "Pasquale Belfrutto",
+          "number": "2",
+          "points": 2
+        },
+        {
+          "team": 4,
+          "name": "Evan Hopkins",
+          "number": "18",
+          "points": 9
+        },
+        {
+          "team": 4,
+          "name": "Richard Montoya",
+          "number": "21",
+          "points": 0
+        },
+        {
+          "team": 4,
+          "name": "John Belbeck",
+          "number": "33",
+          "points": 18
+        },
+        {
+          "team": 4,
+          "name": "Damon Navi",
+          "number": "41",
+          "points": 23
+        },
+        {
+          "team": 4,
+          "name": "John Blair",
+          "number": "45",
+          "points": 17
         }
       ]
     }

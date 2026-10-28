@@ -36,6 +36,7 @@
       var players = team.players
         .map(function (p) {
           var mark = p.captain ? ' <span class="captain-mark">(C)</span>' : "";
+          if (p.status) mark += ' <span class="status-mark" style="color:#888;font-weight:normal;font-size:0.85em">' + p.status + "</span>";
           var cls = p.captain ? ' class="captain"' : "";
           var href = playerHref(p.name);
           return (

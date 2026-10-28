@@ -110,11 +110,13 @@
           num +
           "</td>" +
           "<td>" +
-          '<a class="player-name-link" href="' +
-          playerHref(p.name) +
-          '">' +
-          esc(p.name) +
-          "</a>" +
+          (p.unlisted
+            ? esc(p.name)
+            : '<a class="player-name-link" href="' +
+              playerHref(p.name) +
+              '">' +
+              esc(p.name) +
+              "</a>") +
           (p.sub ? ' <span class="sub-tag" style="color:#888;font-weight:normal">(sub)</span>' : "") +
           "</td>" +
           '<td class="num">' +
