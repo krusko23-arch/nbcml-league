@@ -1,8 +1,8 @@
-/** NBCML game results — 2026-27 Weeks 1–5 */
+/** NBCML game results — 2026-27 Weeks 1–6 */
 window.NBCML_GAMES = {
   "season": "2026-27",
-  "source": "Week 1 (22-Sep-26) aligned to club NBAStatsTeamx.htm (Sep-22 column). Week 2 (29-Sep-26) from scoresheets, re-checked against club Sep-29 column (points match; Ben Lauper counted as T3 roster player; T6 sub credited as club \"Other\"). Weeks 3–5 (6/13/20-Oct-26) from club NBAStatsTeamx.htm per-date columns (fetched 28-Oct-26). DNP = club \"-\" (omitted from box). Subs flagged sub:true and excluded from Player Stats; unnamed subs = club \"Other\" row (unlisted:true).",
-  "gameCount": 15,
+  "source": "Week 1 (22-Sep-26) aligned to club NBAStatsTeamx.htm (Sep-22 column). Week 2 (29-Sep-26) from scoresheets, re-checked against club Sep-29 column (points match; Ben Lauper counted as T3 roster player; T6 sub credited as club \"Other\"). Weeks 3–5 (6/13/20-Oct-26) from club NBAStatsTeamx.htm per-date columns (fetched 28-Oct-26). Week 6 (27-Oct-26) from club Oct-27 column, cross-checked with Pete's scoresheets (club wins on the one conflict: Blair 4 vs sheet 2). DNP = club \"-\" (omitted from box). Subs flagged sub:true and excluded from Player Stats; unnamed subs = club \"Other\" row (unlisted:true).",
+  "gameCount": 18,
   "games": [
     {
       "id": "2026-09-22-early",
@@ -1556,6 +1556,317 @@ window.NBCML_GAMES = {
           "name": "John Blair",
           "number": "45",
           "points": 17
+        }
+      ]
+    },
+    {
+      "id": "2026-10-27-early",
+      "week": 6,
+      "date": "27-Oct-26",
+      "isoDate": "2026-10-27",
+      "dateLabel": "Oct-27",
+      "slot": "early",
+      "time": "6:30 pm",
+      "home": {
+        "team": 5,
+        "score": 80,
+        "captain": "Henry Wong"
+      },
+      "away": {
+        "team": 6,
+        "score": 67,
+        "captain": "Nik Klyushkin"
+      },
+      "winner": 5,
+      "notes": "From club NBAStatsTeamx.htm (Oct-27 column). Scoresheets (photo 28-Oct-26) match club Oct-27 column. T6 sheet: Shadi Almashni row crossed out and reused; its 8 pts (2nd half) are Patric Rossouw per club. Huang played (fouls), 0 pts. Halves: T6 Klyushkin 20/14, Shao 9/2. T5 DNP: Marc Mercanti, Nick Williams. T5 played, 0 pts: Jordan Huang. T6 DNP: Shadi Almashni, Brian Wilson, Jason Scott. Final 80–67 (T5).",
+      "players": [
+        {
+          "team": 5,
+          "name": "Marshall Chen",
+          "number": "11",
+          "points": 13
+        },
+        {
+          "team": 5,
+          "name": "Jordan Huang",
+          "number": "23",
+          "points": 0
+        },
+        {
+          "team": 5,
+          "name": "Henry Wong",
+          "number": "32",
+          "points": 16
+        },
+        {
+          "team": 5,
+          "name": "Rick Spence",
+          "number": "35",
+          "points": 6
+        },
+        {
+          "team": 5,
+          "name": "Reid Spence",
+          "number": "46",
+          "points": 26
+        },
+        {
+          "team": 5,
+          "name": "Raja Shnoudeh",
+          "number": "57",
+          "points": 19
+        },
+        {
+          "team": 6,
+          "name": "Jacob Alajajian",
+          "number": "4",
+          "points": 4
+        },
+        {
+          "team": 6,
+          "name": "Nik Klyushkin",
+          "number": "17",
+          "points": 34
+        },
+        {
+          "team": 6,
+          "name": "Emerson Cruz",
+          "number": "19",
+          "points": 2
+        },
+        {
+          "team": 6,
+          "name": "RJ Rojas",
+          "number": "26",
+          "points": 8
+        },
+        {
+          "team": 6,
+          "name": "Travis Shao",
+          "number": "1",
+          "points": 11
+        },
+        {
+          "team": 6,
+          "name": "Patric Rossouw",
+          "number": "31",
+          "points": 8
+        }
+      ]
+    },
+    {
+      "id": "2026-10-27-middle",
+      "week": 6,
+      "date": "27-Oct-26",
+      "isoDate": "2026-10-27",
+      "dateLabel": "Oct-27",
+      "slot": "middle",
+      "time": "7:40 pm",
+      "home": {
+        "team": 1,
+        "score": 64,
+        "captain": "Chris Robertson"
+      },
+      "away": {
+        "team": 2,
+        "score": 75,
+        "captain": "Paul Pappas"
+      },
+      "winner": 2,
+      "notes": "From club NBAStatsTeamx.htm (Oct-27 column). Scoresheets (photo 28-Oct-26) match club Oct-27 column. Halves T1 32/32, T2 44/31. Katsavos 1st half overwritten on sheet; 19 per club (total 32). Sheet # for Sobolev 37 (club 53). T1 DNP: Frank Vucko. T2 DNP: James Wang. Final 64–75 (T2).",
+      "players": [
+        {
+          "team": 1,
+          "name": "Scott Marven",
+          "number": "5",
+          "points": 14
+        },
+        {
+          "team": 1,
+          "name": "Chris Robertson",
+          "number": "6",
+          "points": 10
+        },
+        {
+          "team": 1,
+          "name": "Frank Caldarola",
+          "number": "13",
+          "points": 3
+        },
+        {
+          "team": 1,
+          "name": "Eagle Yeh",
+          "number": "30",
+          "points": 9
+        },
+        {
+          "team": 1,
+          "name": "Steve Harrison",
+          "number": "42",
+          "points": 3
+        },
+        {
+          "team": 1,
+          "name": "Petar Rafajlovic",
+          "number": "47",
+          "points": 15
+        },
+        {
+          "team": 1,
+          "name": "Richard Young",
+          "number": "58",
+          "points": 10
+        },
+        {
+          "team": 2,
+          "name": "Rob Larson",
+          "number": "7",
+          "points": 9
+        },
+        {
+          "team": 2,
+          "name": "Paulo Carvalho",
+          "number": "8",
+          "points": 10
+        },
+        {
+          "team": 2,
+          "name": "Vishal Bhandari",
+          "number": "9",
+          "points": 9
+        },
+        {
+          "team": 2,
+          "name": "Bill Katsavos",
+          "number": "14",
+          "points": 32
+        },
+        {
+          "team": 2,
+          "name": "Anatoliy Sobolev",
+          "number": "53",
+          "points": 9
+        },
+        {
+          "team": 2,
+          "name": "Paul Pappas",
+          "number": "50",
+          "points": 2
+        },
+        {
+          "team": 2,
+          "name": "Danny Grimes",
+          "number": "48",
+          "points": 4
+        }
+      ]
+    },
+    {
+      "id": "2026-10-27-late",
+      "week": 6,
+      "date": "27-Oct-26",
+      "isoDate": "2026-10-27",
+      "dateLabel": "Oct-27",
+      "slot": "late",
+      "time": "8:50 pm",
+      "home": {
+        "team": 3,
+        "score": 85,
+        "captain": "Jeff Smith"
+      },
+      "away": {
+        "team": 4,
+        "score": 83,
+        "captain": "John Belbeck"
+      },
+      "winner": 3,
+      "notes": "From club NBAStatsTeamx.htm (Oct-27 column). Scoresheets (photo 28-Oct-26) checked vs club Oct-27 column. T3 sub 'The Wizard' #42 (6+2=8) = club T3 Other 8. George Sparangis crossed out on T3 sheet. CONFLICT: T4 sheet shows John Blair 2 (1st half only; sheet player sum 81); club credits Blair 4 and T4 83, club used. T3 DNP: Ben Lauper, Brian Kleiboer. T3 sub(s) credited as club \"Other\": 8 pts (names not listed), not in individual stats. T4 DNP: Mike Purewal. Final 85–83 (T3).",
+      "players": [
+        {
+          "team": 3,
+          "name": "Karma Patel",
+          "number": "15",
+          "points": 3
+        },
+        {
+          "team": 3,
+          "name": "Jeff Smith",
+          "number": "20",
+          "points": 6
+        },
+        {
+          "team": 3,
+          "name": "Ian Mayers",
+          "number": "0",
+          "points": 36
+        },
+        {
+          "team": 3,
+          "name": "Colin Andruniak",
+          "number": "53",
+          "points": 8
+        },
+        {
+          "team": 3,
+          "name": "Dan Gidden",
+          "number": "70",
+          "points": 7
+        },
+        {
+          "team": 3,
+          "name": "Neel Amin",
+          "number": "43",
+          "points": 17
+        },
+        {
+          "team": 3,
+          "name": "Other",
+          "number": "",
+          "points": 8,
+          "sub": true,
+          "unlisted": true
+        },
+        {
+          "team": 4,
+          "name": "Pasquale Belfrutto",
+          "number": "2",
+          "points": 4
+        },
+        {
+          "team": 4,
+          "name": "Evan Hopkins",
+          "number": "18",
+          "points": 11
+        },
+        {
+          "team": 4,
+          "name": "Richard Montoya",
+          "number": "21",
+          "points": 2
+        },
+        {
+          "team": 4,
+          "name": "John Belbeck",
+          "number": "33",
+          "points": 11
+        },
+        {
+          "team": 4,
+          "name": "Damon Navi",
+          "number": "41",
+          "points": 49
+        },
+        {
+          "team": 4,
+          "name": "Mike Holder",
+          "number": "56",
+          "points": 2
+        },
+        {
+          "team": 4,
+          "name": "John Blair",
+          "number": "45",
+          "points": 4
         }
       ]
     }
